@@ -2,6 +2,13 @@
 ### Easy to use API to store forward/backward features
 *Francesco Saverio Zuppichini*
 
+## Installation
+
+```
+pip install https://raw.githubusercontent.com/FrancescoSaverioZuppichini/PytorchModuleStorage/master/setup.py
+
+```
+
 ## Quick Start
 
 You have a model, e.g. `vgg19` and you want to store the features in the third layer given an input `x`. 
@@ -33,7 +40,7 @@ Finally, we can pass a input to the `storage`.
 
 ```python
 x = torch.rand(1,3,224,224).to(device) # random input, this can be an image
-storage(x) # pass the input to the storage
+storage(x) PytorchStorage
 storage[cnn.features[3]][0] # the features can be accessed by passing the layer as a key
 ```
 
