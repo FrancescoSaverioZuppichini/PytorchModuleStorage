@@ -86,7 +86,7 @@ class ModuleStorage():
         if self.debug: print('[INFO] clear')
         [un.remove() for un in self.unsubcribe]
 
-    def __call__(self, where=None):
+    def __call__(self, where=None, *args, **kwargs):
         if where is not None:
             if where not in self.keys(): raise(f"we cannot find any layers with key {where}")
             self.where = where
