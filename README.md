@@ -5,8 +5,7 @@
 ## Installation
 
 ```
-pip install https://raw.githubusercontent.com/FrancescoSaverioZuppichini/PytorchModuleStorage/master/setup.py
-
+pip install git+https://github.com/FrancescoSaverioZuppichini/PytorchModuleStorage.git
 ```
 
 ## Quick Start
