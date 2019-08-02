@@ -1,13 +1,12 @@
 import unittest
-from storage import ForwardModuleStorage
 import torch
 import torch.nn as nn
-from storage import ForwardModuleStorage
+from PytorchStorage import ForwardModuleStorage
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
-class StorageTest(unittest.TestCase):
+class PytorchStorageTest(unittest.TestCase):
     def setUp(self):
         self.x = torch.rand(1,3,224,224).to(device) # random input, this can be an image
         self.y = torch.rand(1,3,224,224).to(device) # random input, this can be an image
