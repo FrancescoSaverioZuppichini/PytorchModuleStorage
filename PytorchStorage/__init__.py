@@ -17,9 +17,11 @@ class MutipleKeysDict(OrderedDict):
     def __getitem__(self, keys):
         
         if type(keys) is list:
-            res = [dict.__getitem__(self, key) for key in keys]
-        else: res = super().__getitem__(keys)
-        return res
+            item = [dict.__getitem__(self, key) for key in keys]
+        else: item = super().__getitem__(keys)
+        # # if is a list and contains only one el, return it
+        # if type(item) is list and len(item) == 1: item = item[0]
+        return item
 
 class ModuleStorage():
     def __init__(self, where2layers, debug=False):
@@ -96,7 +98,8 @@ class ModuleStorage():
         return str({k: [{i : e.shape for i, e in items(v)}] for k, v in self.state.items()})    
 
     def __getitem__(self, key):
-        return self.state[key]
+        item = self.state[key]
+        return item
     
     def keys(self):
         return self.state.keys()
