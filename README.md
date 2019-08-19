@@ -1,6 +1,12 @@
+
 # PytorchModuleStorage
 ### Easy to use API to store forward/backward features
 *Francesco Saverio Zuppichini*
+## Install 
+
+```
+pip install git+https://github.com/FrancescoSaverioZuppichini/PytorchModuleStorage.git
+```
 
 ## Quick Start
 
