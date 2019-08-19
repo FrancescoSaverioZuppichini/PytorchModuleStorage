@@ -1,6 +1,10 @@
 import unittest
 import torch
 import torch.nn as nn
+import sys
+import os
+# sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from PytorchStorage import ForwardModuleStorage
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -78,6 +82,5 @@ class PytorchStorageTest(unittest.TestCase):
         self.assertTrue(type(storage['b'][layer]) is torch.Tensor)
         self.assertTrue(type(storage['b'][layer1]) is torch.Tensor)
 
-
-
-
+if __name__ == '__main__':
+    unittest.main()
